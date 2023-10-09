@@ -74,7 +74,7 @@ namespace calcuNiDonn
             {
                 sanitize(t_display.Text);
                 operation.Add(op);
-                t_display.Text = "0";
+                t_display.Text = t_display.Text;
                 textOutput = "";
                 Console.WriteLine(operation.Count);
                 return;
