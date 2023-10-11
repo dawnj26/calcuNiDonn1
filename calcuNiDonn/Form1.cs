@@ -15,6 +15,7 @@ namespace calcuNiDonn
         string textOutput = "";
         string temp = "";
         List<string> operation = new List<string>();
+        bool hasResult = false;
 
         public Form1()
         {
@@ -30,6 +31,11 @@ namespace calcuNiDonn
                     return;
                 }
 
+            }
+            if (hasResult)
+            {
+                textOutput = "";
+                hasResult = false;
             }
             textOutput += s;
             t_display.Text = textOutput;
@@ -189,6 +195,7 @@ namespace calcuNiDonn
             Console.WriteLine(ans);
             textOutput = ans.ToString();
             operation.Clear();
+            hasResult = true;
         }
 
         private bool division()
@@ -379,6 +386,18 @@ namespace calcuNiDonn
         private void b_percent_Click(object sender, EventArgs e)
         {
             output("√");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textOutput) || textOutput.Length == 1)
+            {
+                textOutput = "";
+                t_display.Text = "0";
+                return;
+            }
+            textOutput = textOutput.Remove(textOutput.Length - 1);
+            t_display.Text = textOutput;
         }
     }
 }

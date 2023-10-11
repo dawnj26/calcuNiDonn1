@@ -50,6 +50,7 @@
             this.b_0 = new System.Windows.Forms.Button();
             this.b_dot = new System.Windows.Forms.Button();
             this.b_equals = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +92,7 @@
             this.tableLayoutPanel1.Controls.Add(this.b_0, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.b_dot, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.b_equals, 3, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 97);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 159);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -104,13 +105,14 @@
             // 
             // b_clear
             // 
+            this.b_clear.BackColor = System.Drawing.Color.Coral;
             this.b_clear.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_clear.Location = new System.Drawing.Point(3, 3);
             this.b_clear.Name = "b_clear";
             this.b_clear.Size = new System.Drawing.Size(94, 74);
             this.b_clear.TabIndex = 0;
             this.b_clear.Text = "C";
-            this.b_clear.UseVisualStyleBackColor = true;
+            this.b_clear.UseVisualStyleBackColor = false;
             this.b_clear.Click += new System.EventHandler(this.b_clear_Click);
             // 
             // b_percent
@@ -313,20 +315,34 @@
             // 
             // b_equals
             // 
+            this.b_equals.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.b_equals.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_equals.Location = new System.Drawing.Point(303, 323);
             this.b_equals.Name = "b_equals";
             this.b_equals.Size = new System.Drawing.Size(94, 74);
             this.b_equals.TabIndex = 0;
             this.b_equals.Text = "=";
-            this.b_equals.UseVisualStyleBackColor = true;
+            this.b_equals.UseVisualStyleBackColor = false;
             this.b_equals.Click += new System.EventHandler(this.b_equals_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 84);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(401, 72);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "←";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 512);
+            this.ClientSize = new System.Drawing.Size(425, 577);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.t_display);
             this.Name = "Form1";
@@ -362,6 +378,7 @@
         private System.Windows.Forms.Button b_0;
         private System.Windows.Forms.Button b_dot;
         private System.Windows.Forms.Button b_equals;
+        private System.Windows.Forms.Button button1;
     }
 }
 
