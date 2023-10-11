@@ -132,6 +132,10 @@ namespace calcuNiDonn
 
         private void equals()
         {
+            if (string.IsNullOrEmpty(textOutput))
+            {
+                return;
+            }
             operation.Add(t_display.Text);
             int last = operation.Count - 1;
             if (operation.Count == 1 && operation[0].Contains("√"))
@@ -182,7 +186,7 @@ namespace calcuNiDonn
 
             t_display.Text = ans.ToString();
             Console.WriteLine(ans);
-            textOutput = "";
+            textOutput = ans.ToString();
             operation.Clear();
         }
 
