@@ -13,6 +13,7 @@ namespace calcuNiDonn
     public partial class Form1 : Form
     {
         string textOutput = "";
+        string temp = "";
         List<string> operation = new List<string>();
 
         public Form1()
@@ -258,7 +259,19 @@ namespace calcuNiDonn
 
         private void b_00_Click(object sender, EventArgs e)
         {
-            output(b_00.Text);
+            if (string.IsNullOrEmpty(textOutput))
+            {
+                return;
+            }
+
+            if (!t_display.Text.Contains("-"))
+            {
+                temp = t_display.Text;
+                t_display.Text = $"-{temp}";
+            } else
+            {
+                t_display.Text = temp;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

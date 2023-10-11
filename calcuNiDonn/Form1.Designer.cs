@@ -285,7 +285,7 @@
             this.b_00.Name = "b_00";
             this.b_00.Size = new System.Drawing.Size(94, 74);
             this.b_00.TabIndex = 0;
-            this.b_00.Text = "00";
+            this.b_00.Text = "+/-";
             this.b_00.UseVisualStyleBackColor = true;
             this.b_00.Click += new System.EventHandler(this.b_00_Click);
             // 
